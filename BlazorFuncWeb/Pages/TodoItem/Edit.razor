@@ -1,0 +1,26 @@
+﻿@page "/todoitem/edit/{todoitemId:int}"
+@inject HttpClient http
+@inject NavigationManager uriHelper
+@inject IJSRuntime js
+
+<h3>Edit</h3>
+
+<DataForm ButtonText="Update" todoitem="todoitem" OnValidSubmit="@EditDeveloper" />
+
+@code {
+    [Parameter] public int todoitemId { get; set; }
+    TodoItem todoitem = new TodoItem();
+
+    protected async override Task OnParametersSetAsync()
+    {
+        todoitem = await http.GetFromJsonAsync<TodoItem>($"api/todoitem/{todoitemId}");
+    }
+
+    async Task EditDeveloper()
+    {
+        await http.PutAsJsonAsync("api/todoitem", todoitem);
+        await js.InvokeVoidAsync("alert", $"Updated Successfully!");
+        uriHelper.NavigateTo("todoitem");
+
+    }
+}

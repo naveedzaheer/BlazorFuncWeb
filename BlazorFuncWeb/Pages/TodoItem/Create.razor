@@ -1,0 +1,16 @@
+﻿@page "/todoitem/create"
+@inject HttpClient http
+@inject NavigationManager uriHelper
+
+<h3>Create</h3>
+
+<DataForm ButtonText="Create Todo Item" todoitem="@todoItem" OnValidSubmit="@CreateTodoItem" />
+
+@code {
+    TodoItem todoItem = new TodoItem();
+    async Task CreateTodoItem()
+    {
+        await http.PostAsJsonAsync("api/todoitem", todoItem);
+        uriHelper.NavigateTo("todoitem");
+    }
+}
