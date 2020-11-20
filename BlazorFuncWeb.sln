@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorFuncWeb", "BlazorFuncWeb\BlazorFuncWeb.csproj", "{3A4A93FD-8010-4C2D-8FAC-9B0ABE0DD334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorFuncWeb", "BlazorFuncWeb\BlazorFuncWeb.csproj", "{3A4A93FD-8010-4C2D-8FAC-9B0ABE0DD334}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorFuncWeb.Common", "BlazorFuncWeb.Common\BlazorFuncWeb.Common.csproj", "{FA1161EB-24B8-41B3-B178-BD62CE661456}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorFuncWeb.Common", "BlazorFuncWeb.Common\BlazorFuncWeb.Common.csproj", "{FA1161EB-24B8-41B3-B178-BD62CE661456}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorFuncWeb.Func", "BlazorFuncWeb.Func\BlazorFuncWeb.Func.csproj", "{1EF63626-2D28-42C0-AA67-C98E3063FFF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorFuncWeb.Func", "BlazorFuncWeb.Func\BlazorFuncWeb.Func.csproj", "{1EF63626-2D28-42C0-AA67-C98E3063FFF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0CDDBA8A-A56F-4E6C-B72F-19EC0B131D47}"
+	ProjectSection(SolutionItems) = preProject
+		Code-Config-Changes.txt = Code-Config-Changes.txt
+		TableCreate.sql = TableCreate.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

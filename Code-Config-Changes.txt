@@ -1,0 +1,21 @@
+# Add a  "appsettings.Development.json" in "wwwroot" folder in the Web Assembly
+{
+  "BaseAddress": "http://localhost:7071/"
+}
+
+# Change the code in the "Main" function in "Progroma.cs" file in WebAseembly
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+            builder.RootComponents.Add<App>("app");
+
+            var baseAddress = builder.Configuration["BaseAddress"] ?? builder.HostEnvironment.BaseAddress;
+            builder.Services.AddScoped(_ => new HttpClient { BaseAddress = new Uri(baseAddress) });
+
+            await builder.Build().RunAsync();
+
+
+
+# Add this CORS setting in "local.settings.json" for teh Function App
+  "Host": {
+    "LocalHttpPort": 7071,
+    "CORS": "*"
+  }
